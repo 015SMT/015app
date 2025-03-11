@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앱 다운로드 중...</title>
+    <script>
+        function redirectToStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.app015.talk&hl=ko";
+            } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                window.location.href = "https://apps.apple.com/kr/app/%ED%86%A1%EB%B9%84%EC%84%9C/id6738156853";
+            } else {
+                window.location.href = "https://a015.com";
+            }
+        }
+    </script>
+</head>
+<body onload="redirectToStore()">
+    <p>앱스토어로 이동 중...</p>
+</body>
+</html>
